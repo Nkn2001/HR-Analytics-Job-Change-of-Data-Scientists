@@ -17,4 +17,10 @@ full_name: full name of an enrollee
 city: the name of an enrollie's city
 gender: gender of an enrollee
 The source: https://docs.google.com/spreadsheets/d/1VCkHwBjJGRJ21asd9pxW4_0z2PWuKhbLR3gUHm-p4GI/edit?usp=sharing
-### 2. 
+### 2.  Enrollies' education
+After enrollment everyone should fill the form about their education level. This form is being digitalized manually.
+The file enrollies_education.xlsx has been provided in this project. Please feel free to download and use it as needed.
+### 3. Enrollies' working experience
+Another survey that is being collected manually by educational department is about working experience.
+The work_experience.xlsx file is also included in this project. You can download it here.
+
