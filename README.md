@@ -147,6 +147,58 @@ work_experience.info()
 | 4   | company_type        | 13018          | object |
 | 5   | last_new_job        | 18735          | object |
 
+#### 3.3.1 Fix data type 
+In this table, the data type does not need to be converted.
+
+#### 3.3.2 Fill missing values
+
+work_experience_mode = work_experience['experience'].mode()[0]
+work_experience['experience'].fillna(work_experience_mode, inplace=True)
+
+### 3.4 Training Hour
+
+training_hours.info()
+| #  | Column         | Non-Null Count | Dtype |
+|----|---------------|----------------|-------|
+| 0  | enrollee_id   | 19158 non-null | int64 |
+| 1  | training_hours| 19158 non-null | int64 |
+
+In this table, there is no data that needs to be transformed.
+
+### 3.5 City Development Index
+
+city.info()
+| #  | Column                | Non-Null Count | Dtype   |
+|----|-----------------------|----------------|---------|
+| 0  | City                  | 123 non-null   | object  |
+| 1  | City Development Index| 123 non-null   | float64 |
+
+### 3.6 Employment
+
+employment.info()
+| #  | Column                | Non-Null Count | Dtype   |
+|----|-----------------------|----------------|---------|
+| 0  | enrollee_id           | 19158 non-null | int64   |
+| 1  | employed              | 19158 non-null | float64 |
+
+## 4. Load Data
+
+
+db_path = 'data_warehouse.db'
+engine = create_engine(f'sqlite:///{db_path}')
+
+tables = [
+    ('dim_enrollies_data', enrollies_data),
+    ('fact_enrollies_education', enrollies_education),
+    ('dim_work_experience', work_experience),
+    ('dim_traning_hours', training_hours),
+    ('dim_city', city),
+    ('fact_employment', employment)
+]
+
+for table_name, dataframe in tables:
+    dataframe.to_sql(table_name, engine, if_exists='replace', index=False)
+
 
 
 
