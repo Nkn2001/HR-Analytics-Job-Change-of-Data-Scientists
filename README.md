@@ -138,20 +138,14 @@ enrollies_education['major_discipline'].fillna(major_discipline_mode, inplace=Tr
 ### 3.3 Enrollies' working experience
 
 work_experience.info()
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 19158 entries, 0 to 19157
-Data columns (total 6 columns):
- #   Column               Non-Null Count  Dtype 
----  ------               --------------  ----- 
- 0   enrollee_id          19158 non-null  int64 
- 1   relevent_experience  19158 non-null  object
- 2   experience           19158 non-null  string
- 3   company_size         13220 non-null  object
- 4   company_type         13018 non-null  object
- 5   last_new_job         18735 non-null  object
-dtypes: int64(1), object(4), string(1)
-memory usage: 898.2+ KB
-
+| #   | Column              | Non-Null Count | Dtype  |
+|-----|---------------------|----------------|--------|
+| 0   | enrollee_id         | 19158          | int64  |
+| 1   | relevent_experience | 19158          | object |
+| 2   | experience          | 19158          | string |
+| 3   | company_size        | 13220          | object |
+| 4   | company_type        | 13018          | object |
+| 5   | last_new_job        | 18735          | object |
 
 
 
