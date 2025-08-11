@@ -129,5 +129,16 @@ Similar to above, I used the mode value to fill the missing values.
 enrolled_university_mode = enrollies_education['enrolled_university'].mode()[0]
 enrollies_education['enrolled_university'].fillna(enrolled_university_mode, inplace=True)
 
+education_level_mode = enrollies_education['education_level'].mode()[0]
+enrollies_education['education_level'].fillna(education_level_mode, inplace=True)
+
+major_discipline_mode = enrollies_education['major_discipline'].mode()[0]
+enrollies_education['major_discipline'].fillna(major_discipline_mode, inplace=True)
+
+### 3.3 Enrollies' working experience
+
+work_experience.info()
+https://colab.research.google.com/drive/1V5SYR16i0U2hLe2XPEkHWbs5dva_WXGj#scrollTo=JUY_rouIJCfg&line=1&uniqifier=1
+
 
 
