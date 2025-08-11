@@ -189,10 +189,15 @@ engine = create_engine(f'sqlite:///{db_path}')
 
 tables = [
     ('dim_enrollies_data', enrollies_data),
+    
     ('fact_enrollies_education', enrollies_education),
+    
     ('dim_work_experience', work_experience),
+    
     ('dim_traning_hours', training_hours),
+    
     ('dim_city', city),
+    
     ('fact_employment', employment)
 ]
 
